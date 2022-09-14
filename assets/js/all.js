@@ -1,3 +1,5 @@
+"use strict";
+
 var swiperClass = new Swiper(".mySwiper-class", {
   spaceBetween: 16,
   centeredSlides: true,
@@ -6,7 +8,7 @@ var swiperClass = new Swiper(".mySwiper-class", {
   speed: 1500,
   autoplay: {
     delay: 0,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
   breakpoints: {
     768: {
@@ -15,7 +17,7 @@ var swiperClass = new Swiper(".mySwiper-class", {
     992: {
       slidesPerView: 9
     }
-  },
+  }
 });
 var swiperFeedback = new Swiper('.mySwiper-feedback', {
   // Optional parameters
@@ -23,17 +25,15 @@ var swiperFeedback = new Swiper('.mySwiper-feedback', {
   fadeEffect: {
     crossFade: true
   },
-
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination'
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    prevEl: '.swiper-button-prev'
+  }
 });
 var swiperProject = new Swiper(".mySwiper-project", {
   spaceBetween: 16,
@@ -49,5 +49,6 @@ var swiperProject = new Swiper(".mySwiper-project", {
       autoplay: false,
       slidesPerView: 6
     }
-  },
+  }
 });
+//# sourceMappingURL=all.js.map
