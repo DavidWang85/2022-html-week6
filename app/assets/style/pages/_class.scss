@@ -1,0 +1,6 @@
+.border.border-light.link-hover-border-primary{
+    background: red;
+    &:hover{
+        border: 1px solid $primary;
+    }
+}

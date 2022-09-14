@@ -1,0 +1,317 @@
+.banner{
+    height: calc(100vh - 91px );
+    width: 100%;
+    &-content{
+        height: calc(100vh - 91px);
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_home.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &-text{
+        padding-top: 51px;
+        padding-bottom: 51px;
+    }
+}
+.white-block{
+    width: 10px;
+    height: 10px;
+    background: $light;
+}
+.title-border{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        margin-top: 16px;
+        top: 100%;
+        left: 0;
+        background: $primary;
+        width: 50px;
+        height: 3px;
+    }
+    @include md{
+        &::after {
+            content: "";
+            position: absolute;
+            margin-top: 16px;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: $primary;
+            width: 50px;
+            height: 3px;
+        }
+    }
+}
+.title-border-center{
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        margin-top: 16px;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: $primary;
+        width: 50px;
+        height: 3px;
+    }
+}
+.icon-size-40{
+    font-size: 40px;
+}
+.border-transparent{
+    border: 1px solid transparent;
+    &:hover{
+        background: #202020;
+        border: 1px solid $primary;
+        .material-icons{
+            background-image: linear-gradient(180deg, $secondary, $primary);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+    @include md{
+        background: #202020;
+    }
+}
+.sub-number-01::after{
+    content: "01";
+    position: absolute;
+    font-family: 'Azeret Mono', monospace;
+    color: $primary;
+    background: $dark;
+    font-size: 48px;
+    top: 0;
+    transform: translate(0, -50%);
+}
+.sub-number-02::after {
+    content: "02";
+    position: absolute;
+    font-family: 'Azeret Mono', monospace;
+    color: $primary;
+    background: $dark;
+    font-size: 48px;
+    top: 0;
+    transform: translate(0, -50%);
+}
+.sub-number-03::after {
+    content: "03";
+    position: absolute;
+    font-family: 'Azeret Mono', monospace;
+    color: $primary;
+    background: $dark;
+    font-size: 48px;
+    top: 0;
+    transform: translate(0, -50%);
+}
+.sub-number-04::after {
+    content: "04";
+    position: absolute;
+    font-family: 'Azeret Mono', monospace;
+    color: $primary;
+    background: $dark;
+    font-size: 48px;
+    top: 0;
+    transform: translate(0, -50%);
+}
+
+// swiper
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.mySwiper-class{
+    width: 95%;
+}
+.swiper-slide {
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img-100{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.advertisement-bg{
+    background-size: cover;
+    display: block;
+    background-position: center center;
+    box-shadow: 0 602px rgba(28, 28, 28, 0.9) inset;
+    &:hover{
+        box-shadow: 0 602px rgba(26, 26, 26, 0.12) inset;
+        .text{
+            opacity: 1;
+        }
+        .title-border-light{
+            &::after {
+                background: $primary;
+                width: 70px;
+            }
+        }
+        .advertisement-icon{
+            color: $primary;
+        }
+    }
+    &-bg1{
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info01.jpg);
+    }
+    &-bg2{
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info02.jpg);
+    }
+    &-bg3{
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info03.jpg);
+    }
+    &-bg4{
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info04.jpg);
+    }
+    .text{
+        opacity: 0.5;
+        color: $light;
+    }
+}
+.feedback{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_share.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 773px;
+    @include lg{
+        height: auto;
+    }
+}
+.mySwiper-feedback{
+    width: 100%;
+    height: 429px;
+    @include lg{
+        height: auto;
+    }
+    &-img{
+        top: 0;
+        left: 10px;
+        width: 60%;
+        height: 90%;
+        border-radius: 24px;
+        position: absolute;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #7C7E77;
+            border-radius: 24px;
+            left: -10px;
+            top: 10px;
+            z-index: -1;
+            @include lg{
+                left: -5px;
+                top: 5px;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+            @include lg{
+                position: relative;
+                width: calc(100% - 5px);
+                height: 213px;
+                left: 5px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .feedback-card{
+        background: $light;
+        width: 45%;
+        padding: 32px;
+        border-radius: 24px 24px 24px 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        .card-img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 32px;
+            bottom: 100%;
+            transform: translateY(50%);
+            @include lg{
+                width: 80px;
+                height: 80px;
+                right: 24px;
+                top: -30px;
+                bottom: auto;
+                transform: none;
+            }
+        }
+        @include lg{
+            position: relative;
+            width: 100%;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        content: '';
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        position: unset;
+        width: 24px;
+        height: 24px;
+        margin-top: 0;
+        color: #62DB54;
+    }
+    .swiper-pagination {
+        position: unset;
+        width: auto;
+        .swiper-pagination-bullet {
+            background-color: $primary;
+            opacity: initial;
+
+            &-active {
+                width: 16px;
+                border-radius: 100px;
+            }
+        }
+    }
+    .swiper-buttons {
+        bottom: 0;
+        left: 30%;
+        transform: translateX(-50%);
+        z-index: 10;
+        position: absolute;
+    }
+    @include lg{
+        position: initial;
+        transform: none;
+    }
+}
+.share-icon{
+    width: 104px;
+    font-size: 80px;
+}
