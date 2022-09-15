@@ -51,4 +51,5 @@ var swiperProject = new Swiper(".mySwiper-project", {
     }
   }
 });
+AOS.init();
 //# sourceMappingURL=all.js.map
